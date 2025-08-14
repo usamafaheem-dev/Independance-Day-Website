@@ -17,7 +17,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playwrite+AU+QLD:wght@100..400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="Mediaquereies.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
     <style>
         :root {
@@ -436,7 +436,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding: 20px;
+            padding: 60px;
             gap: 15px;
             border-top-right-radius: 10px;
             border-bottom-left-radius: 10px;
@@ -446,7 +446,7 @@
         section .history .history-text .history-3 h1 {
             color: var(--green-color);
             font-family: var(--italic-font);
-            font-size: 30px;
+            font-size: 18px;
         }
 
         section .history .history-text .history-3 p {
@@ -463,8 +463,8 @@
         }
 
         section .history .history-text .clippathdiv {
-            width: 450px;
-            height: 350px;
+            height: 100%;
+            width: 100%;
             box-shadow: 0 0 5px black;
             border-top-left-radius: 10px;
             border-bottom-right-radius: 15px;
@@ -992,7 +992,8 @@
             #historyheading{
                 font-size: 30px;
             }
-        
+        }
+
         /* Footer */
         .site-footer {
             background: radial-gradient(1200px 400px at 50% -10%, rgba(255, 255, 255, 0.08), transparent),
@@ -1257,6 +1258,8 @@
             gap: 10px;
             transition: transform .25s ease, box-shadow .25s ease;
         }
+
+
         .force-card:hover { transform: translateY(-6px); box-shadow: 0 16px 40px rgba(0,0,0,0.35); }
         .force-card .media { width: 100%; height: 170px; border-radius: 10px; overflow: hidden; }
         .force-card .media video { width: 100%; height: 100%; object-fit: cover; }
@@ -1264,7 +1267,6 @@
         .force-card p { color: #d6f5d6; font-size: 13px; line-height: 1.45; }
         @media (max-width: 992px) { .forces-grid { grid-template-columns: 1fr 1fr; } }
         @media (max-width: 560px) { .forces-grid { grid-template-columns: 1fr; } }
-    }
     </style>
 
 </head>
@@ -1351,6 +1353,7 @@
             
 
         </div>
+        </div>
     </main>
     <!-- hero section end -->
 
@@ -1373,7 +1376,7 @@
                                 Two-Nation Theory became the foundation for a separate homeland."</p>
                         </div>
                         <div class="insidehistory-1-2">
-                            <video src="./assests/128740-742053572.mp4" autoplay muted loop playsinline
+                            <video src="./assests/videoplayback (5).mp4" autoplay muted loop playsinline
                                 preload="metadata"></video>
                         </div>
                     </div>
@@ -1387,7 +1390,7 @@
                                 better future."</p>
                         </div>
                         <div class="insidehistory-1-2">
-                            <video src="./assests/videoplayback.mp4" autoplay muted loop playsinline
+                            <video src="./assests/videoplayback (6).mp4" autoplay muted loop playsinline
                                 preload="metadata"></video>
                         </div>
                     </div>
@@ -1396,7 +1399,7 @@
                 <div class="history-3">
                     <h1 class="his-heading">Early Years of Pakistan</h1>
                     <div class="clippathdiv">
-                        <video src="./assests/videoplayback.mp4" autoplay muted loop playsinline
+                        <video src="./assests/videoplayback (7).mp4" autoplay muted loop playsinline
                             preload="metadata"></video>
                     </div>
                     <p>"In its early years, Pakistan worked hard to build its institutions, economy, and unity. Despite
@@ -1423,7 +1426,7 @@
                         <h5>Youm-e-Tashakur </h5>
                         <h5>16 May 2025</h5>
                         <div>
-                            <video class="hero" src="./assests/videoplayback (3).mp4" autoplay muted loop playsinline
+                            <video class="hero" src="./assests/videoplayback (1).mp4" autoplay muted loop playsinline
                                 preload="metadata"></video>
                         </div>
                         <p>Ye ek newly declared national observance hai, jo annual taur par manaya jayega, jahan desh
@@ -1451,7 +1454,7 @@
                         <h5>Defence Day</h5>
                         <h5>6 September 2025</h5>
                         <div>
-                            <video class="hero" src="./assests/videoplayback.mp4" autoplay muted loop playsinline
+                            <video class="hero" src="./assests/videoplayback (2).mp4" autoplay muted loop playsinline
                                 preload="metadata"></video>
 
                         </div>
@@ -1462,13 +1465,13 @@
                     </div>
                     <div class="event-div-first">
 
-                        <h5> Anniversary of Jinnah </h5>
+                        <h5>Birth of Jinnah </h5>
                         <h5>11 September 2025</h5>
                         <div>
-                            <video src="./assests/videoplayback (3).mp4" autoplay muted loop playsinline
+                            <video src="./assests/videoplayback (4).mp4" autoplay muted loop playsinline
                                 preload="metadata"></video>
                         </div>
-                        <p>Founder of Pakistan, Quaid-e-Azam Muhammad Ali Jinnah ki wafat ke din unki legacy aur
+                        <p>Founder of Pakistan, Quaid-e-Azam Muhammad Ali Jinnah ki Padish ke din unki legacy aur
                             leadership ko yaad kiya jata hai.
                         </p>
 
@@ -1582,7 +1585,7 @@
     <!-- Provinces Section -->
     <section class="provinces-section" id="provinces">
         <div class="provinces-inner">
-            <h2 class="section-title"> Provinces of Pakistan</h2>
+            <h2 class="section-title">Pakistan ke Subay (Provinces)</h2>
             <p class="section-subtitle">Har suba apni zubaan, saqafat aur riwayat ke saath hamari pehchan ko mazboot banata hai.</p>
             <div class="provinces-grid">
                 <div class="province-card">
@@ -1608,25 +1611,25 @@
     <!-- Armed Forces Section -->
     <section class="forces-section" id="forces">
         <div class="forces-inner">
-            <h2 class="section-title">Millerty Forces of Pakistan</h2>
+            <h2 class="section-title">Pakistan ki Musallah Afwaj</h2>
             <div class="forces-grid">
                 <div class="force-card">
                     <div class="media">
-                        <video src="./assests/videoplayback.mp4" autoplay muted loop playsinline preload="metadata"></video>
+                        <video src="./assests/videoplayback (8).mp4" autoplay muted loop playsinline preload="metadata"></video>
                     </div>
                     <h5><i class="fa-solid fa-person-military-pointing"></i> Pakistan Army</h5>
                     <p>Mulki hifazat, aman o aman aur qaumi islahat mein hamesha pehlu numaya. Jazba-e-iman ke saath.</p>
                 </div>
                 <div class="force-card">
                     <div class="media">
-                        <video src="./assests/128740-742053572.mp4" autoplay muted loop playsinline preload="metadata"></video>
+                        <video src="./assests/videoplayback (9).mp4" autoplay muted loop playsinline preload="metadata"></video>
                     </div>
                     <h5><i class="fa-solid fa-anchor"></i> Pakistan Navy</h5>
                     <p>Samandari sarhadon ki hifazat, maritime security aur behtareen professional force.</p>
                 </div>
                 <div class="force-card">
                     <div class="media">
-                        <video src="./assests/133073-755697239.mp4" autoplay muted loop playsinline preload="metadata"></video>
+                        <video src="./assests/videoplayback (10).mp4" autoplay muted loop playsinline preload="metadata"></video>
                     </div>
                     <h5><i class="fa-solid fa-jet-fighter-up"></i> Pakistan Air Force</h5>
                     <p>Aasmani hifazat, modern jets aur cutting-edge technology ke saath quwat-e-difa ka aham hissa.</p>
