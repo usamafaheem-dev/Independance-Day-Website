@@ -18,1260 +18,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playwrite+AU+QLD:wght@100..400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="style.css">
     <style>
-        :root {
-            --italic-font: "Playwrite AU QLD", cursive;
-            --line-font: "Playwrite MX Guides", cursive;
-            --green-color: #025323;
-            --heading-one: 35px
-        }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-
-            font-family: "Poppins", sans-serif;
-
-
-
-        }
-
-        .nav-div {
-            /* background-color: #025323; */
-
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 5px 20px;
-            color: #025323;
-            background: white;
-            position: fixed;
-            top: 0px;
-            width: 100%;
-            z-index: 1000;
-            box-shadow: 0 0 7px 1px var(--green-color);
-        }
-
-        .nav-div .logo {
-            font-size: 22px;
-            font-weight: bold;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            gap: 10px;
-
-        }
-
-        .font-change {
-            font-family: var(--italic-font);
-        }
-
-        .nav-div .logo .flag {
-            width: 90px;
-            height: 60px;
-            border-radius: 10px;
-
-        }
-
-        .nav-div div ul {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            list-style: none;
-            gap: 15px;
-            font-size: 16px;
-            font-weight: 500;
-
-
-
-        }
-
-        .nav-div div ul li {
-
-            /* background-color:var(--green-color); */
-
-            /* background-color: rgba(0, 0, 0, 0.1); */
-
-            border: 1px solid var(--green-color);
-            padding: 2px 10px;
-            border-radius: 5px;
-
-        }
-
-        .nav-div div ul li:hover {
-
-            border: none;
-            background-color: transparent;
-
-
-
-        }
-
-        .nav-div div ul li a {
-            color: var(--green-color);
-
-
-            text-decoration: none;
-
-
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            position: relative;
-        }
-
-        .nav-div div ul li a:hover {
-            text-shadow: 0 0 10px var(--green-color);
-        }
-
-
-
-        .nav-div div ul li a::after {
-            content: "";
-            position: absolute;
-            bottom: -2px;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background-color: #025323;
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform 0.3s linear;
-
-        }
-
-        .nav-div div ul li a:hover::after {
-            transform: scaleX(1);
-        }
-
-        .nav-div .logo .font-change2 {
-            display: none;
-        }
-
-
-
-
-
-        /* hero section */
-        .hero-section {
-            width: 100%;
-            height: 550px;
-            margin-top: 60px;
-            position: relative;
-            display: flex;
-           justify-content: space-evenly;
-           align-items: center;
-
-        }
-
-        .hero-section video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            position: absolute;
-            z-index: 1;
-
-        }
-
-        .overlay {
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            z-index: 2;
-            background-color: rgba(0, 0, 0, 0.2);
-        }
-
-        .hero-section .hero-text {
-            width: 400px;
-            height: auto;
-         
-            background-color: rgba(5, 5, 5, 0.2);
-            padding: 30px;
-            border-radius: 5px;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            z-index: 3;
-
-        }
-
-        .hero-section div h1 {
-
-
-            justify-content: center;
-            align-items: center;
-            color: white;
-            /* text-align: center; */
-        }
-
-        .hero-section div p {
-
-            color: white;
-            filter: drop-shadow();
-        }
-
-        .hero-section .hero-text .herobtn {
-            color: green;
-            padding: 4px 10px;
-            margin: 0 auto;
-            font-weight: 500;
-            font-family: var(--italic-font);
-            border-radius: 5px;
-            cursor: pointer;
-            display: inline-flex;
-            gap: 0;
-            transition: all 0.4s ease-in-out;
-            border: 1px solid green;
-            background-color: rgba(250, 250, 250, 0.7);
-        }
-
-        .hero-section .hero-text .herobtn .change2 {
-            display: none;
-        }
-
-        .hero-section .hero-text .herobtn:hover {
-            background-color: var(--green-color);
-            color: white;
-            gap: 5px;
-            /* show gap on hover */
-        }
-
-
-        .hero-section .hero-text .herobtn:hover .change2 {
-            display: flex;
-        }
-
-        .hero-section .hero-text .features {
-            /* width: 200px; */
-            height: 100px;
-            /* background-color: red; */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .hero-section .hero-text .features div {
-            /* background-color: blue; */
-            width: 90px;
-            height: 80px;
-            z-index: 1000;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-        }
-
-
-        .hero-section .hero-text .features video {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-        }
-
-        .hero-section .leader {
-            width:450px;
-            height: auto;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 10px;
-            z-index: 3;
-        }
-
-
-        .hero-section .inside-leader {
-          
-            display: flex;
-
-            justify-content: space-between;
-        }
-
-        .leader div {
-            /* border: 1px solid white; */
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            gap: 5px;
-            background-color: rgba(5, 5, 5, 0.2);
-            color: white;
-            border-radius: 5px;
-            padding: 5px;
-
-        }
-
-        .leader div img {
-            width: 150px;
-            height: 200px;
-            border-radius: 10px;
-        }
-
-        .leader div h4 {
-            font-family: var(--italic-font);
-        }
-
-
-
-
-
-
-        section .history {
-            /* background-color: red; */
-            margin-top: 20px;
-            width: 100%;
-            height: auto;
-
-        }
-
-        section .history h1 {
-            text-align: center;
-            font-size: var(--heading-one);
-            font-family: var(--line-font);
-            color: var(--green-color);
-        }
-
-        section .history .history-text {
-            margin-top: 20px;
-            width: 100%;
-            height: 500px;
-            /* background-color: blue; */
-            display: flex;
-            padding: 10px 20px;
-            gap: 10px;
-            display: flex;
-            justify-content: space-between;
-            /* align-items: ce; */
-
-        }
-
-        section .history .history-text .double-div {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: center;
-
-        }
-
-        section .history .history-text .history-1 {
-            width: 700px;
-            height: 235px;
-            box-shadow: 0 0 6px 1px var(--green-color);
-            display: flex;
-            padding: 10px;
-            border-top-left-radius: 10px;
-            border-bottom-right-radius: 10px;
-            /* background-color: rgba(5, 5, 5, 0.2); */
-
-        }
-
-        section .history .history-text .history-1 .insidehistory-1,
-        section .history .history-text .history-2 .insidehistory-1 {
-
-            width: 500px;
-            height: 220px;
-            /* background-color: green; */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            gap: 8px;
-            border-top-left-radius: 5px;
-            border-bottom-left-radius: 5px;
-        }
-
-        section .history .history-text .history-1 .insidehistory-1 h1,
-        section .history .history-text .history-2 .insidehistory-1 h1 {
-            font-size: 25px;
-            color: var(--green-color);
-            font-family: var(--italic-font);
-        }
-
-        section .history .history-text .history-1 .insidehistory-1 p,
-        section .history .history-text .history-2 .insidehistory-1 p {
-            color: var(--green-color);
-            text-align: center;
-        }
-
-
-        section .history .history-text .history-1 .insidehistory-1-2,
-        section .history .history-text .history-2 .insidehistory-1-2 {
-            width: 300px;
-            height: 220px;
-            /* background-color: yellow; */
-            border-top-right-radius: 5px;
-            border-bottom-right-radius: 5px;
-        }
-
-        section .history .history-text .history-1 .insidehistory-1-2 video,
-        section .history .history-text .history-2 .insidehistory-1-2 video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-top-left-radius: 15px;
-            border-bottom-right-radius: 15px;
-        }
-
-        section .history .history-text .history-2 {
-            width: 700px;
-            height: 235px;
-            box-shadow: 0 0 6px 1px var(--green-color);
-            display: flex;
-            padding: 10px;
-            border-top-left-radius: 10px;
-            border-bottom-right-radius: 10px;
-
-            /* background-color: rgba(5, 5, 5, 0.2); */
-        }
-
-
-        section .history .history-text .history-3 {
-            width: 100%;
-            height: 100%;
-            /* clip-path: polygon(24.94% 35.29%, 50.29% 35.29%, 57.55% 19.62%, 74.81% 19.62%, 74.81% 74.81%, 24.94% 74.81%); */
-            box-shadow: 0 0 6px 1px var(--green-color);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 60px;
-            gap: 15px;
-            border-top-right-radius: 10px;
-            border-bottom-left-radius: 10px;
-            /* background-color: rgba(1, 1, 1, 0.1); */
-        }
-
-        section .history .history-text .history-3 h1 {
-            color: var(--green-color);
-            font-family: var(--italic-font);
-            font-size: 18px;
-        }
-
-        section .history .history-text .history-3 p {
-            text-align: center;
-            color: var(--green-color);
-        }
-
-        section .history .history-text .history-3 .clippathdiv video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-top-left-radius: 15px;
-            border-bottom-right-radius: 15px;
-        }
-
-        section .history .history-text .clippathdiv {
-            height: 100%;
-            width: 100%;
-            box-shadow: 0 0 5px black;
-            border-top-left-radius: 10px;
-            border-bottom-right-radius: 15px;
-
-        }
-
-
-
-        /* animation part */
-
-        .headinghisdiv {
-            display: flex;
-            justify-content: center;
-        }
-
-        .scroll-text {
-            /* background: linear-gradient(90deg, #006400, #008333); */
-            color: var(--green-color);
-            overflow: hidden;
-            white-space: nowrap;
-            padding: 12px 0;
-            border-top: 3px solid #ffffff33;
-            border-bottom: 3px solid #ffffff33;
-        }
-
-        .scroll-text h1 {
-            animation: scroll 20s linear infinite;
-            display: inline-block;
-            padding-left: 100%;
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            font-size: 1.5rem;
-            font-weight: bold;
-            letter-spacing: 1px;
-        }
-
-
-
-
-        @keyframes scroll {
-            0% {
-                transform: translateX(-10%);
-            }
-
-            100% {
-                transform: translateX(-100%);
-            }
-        }
-
-        #historyheading {
-            /* display: block; */
-            animation: bounce 1.5s ease infinite;
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            color: #025323;
-            text-align: center;
-            font-size: 40px;
-            display: inline-block;
-
-            border-bottom: 1px solid var(--green-color);
-        }
-
-        @keyframes bounce {
-            0% {
-                transform: translateY(0);
-                /* Normal position */
-            }
-
-            60% {
-                transform: translateY(-9px);
-            }
-
-        }
-
-        .hero-text-heading {
-            animation: hero-heading-animation 1s ease-in-out;
-
-
-        }
-
-        @keyframes hero-heading-animation {
-            0% {
-                transform: translateY(-50px);
-                /* transform-origin: (0%,50%); */
-            }
-
-            100% {
-                transform: translateY(0);
-            }
-        }
-
-        .hero-text-text {
-            animation: hero-text-text 1.5s ease-in-out;
-
-        }
-
-        @keyframes hero-text-text {
-            0% {
-                transform: translateX(-30px);
-                /* transform-origin: (0%,50%); */
-            }
-
-            100% {
-                transform: translateX(0);
-            }
-        }
-
-        .features-video-one {
-            animation: features-video-one 1.5s ease-in-out;
-        }
-
-        @keyframes features-video-one {
-            0% {
-                transform: translateX(-30px);
-                /* transform-origin: (0%,50%); */
-            }
-
-            100% {
-                transform: translateX(0);
-            }
-        }
-
-        .features-video-two {
-            animation: features-video-two 1.5s ease-in-out;
-        }
-
-        @keyframes features-video-two {
-            0% {
-                transform: translateY(30px);
-                /* transform-origin: (0%,50%); */
-            }
-
-            100% {
-                transform: translateY(0);
-            }
-        }
-
-        .features-video-three {
-            animation: features-video-three 1.5s ease-in-out;
-        }
-
-        @keyframes features-video-three {
-            0% {
-                transform: translateX(30px);
-                /* transform-origin: (0%,50%); */
-            }
-
-            100% {
-                transform: translateX(0);
-            }
-        }
-
-        .font-change {
-            animation: font-change 1.5s ease-in-out;
-        }
-
-        @keyframes font-change {
-            0% {
-                transform: translateY(-50px);
-                /* transform-origin: (0%,50%); */
-            }
-
-            100% {
-                transform: translateX(0);
-            }
-        }
-
-        .leader-image {
-            animation: leader-image 1.5s ease-in-out;
-        }
-
-        @keyframes leader-image {
-            0% {
-                transform: rotateY(90deg);
-                opacity: 0;
-                /* transform-origin: (0%,50%); */
-            }
-
-            100% {
-                transform: rotateY(0deg);
-                opacity: 1;
-            }
-        }
-
-        .his-heading {
-            animation: his-heading 5s ease-in-out;
-        }
-
-        @keyframes his-heading {
-            0% {
-                transform: rotateY(90deg);
-                opacity: 0;
-                /* transform-origin: (0%,50%); */
-            }
-
-            100% {
-                transform: rotateY(0deg);
-                opacity: 1;
-            }
-        }
-
-        .event-div {
-            width: 100%;
-            height: auto;
-            background: radial-gradient(1200px 400px at 50% -10%, rgba(255, 255, 255, 0.08), transparent),
-                linear-gradient(135deg, #0b5d2a 0%, #0a3d1e 50%, #062614 100%);
-            /* display: flex; */
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            padding: 40px 0px;
-            color: white;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .event-div .inside-event-div {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            align-items: stretch;
-            flex-wrap: wrap;
-            padding: 10px 20px;
-        }
-
-        .event-div h1 {
-            font-size: 38px;
-            color: #eaffea;
-            padding: 10px 0 20px 0;
-            text-align: center;
-            font-family: var(--italic-font);
-            letter-spacing: 0.5px;
-            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
-        }
-
-        .event-div .inside-event-div .event-div-first {
-            width: 290px;
-            min-height: 360px;
-            /* background-color: blue; */
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            flex-direction: column;
-            gap: 12px;
-            border-radius: 16px;
-            background: rgba(255, 255, 255, 0.08);
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
-            backdrop-filter: blur(8px);
-            -webkit-backdrop-filter: blur(8px);
-            padding: 14px 14px 16px 14px;
-            transition: transform 0.25s ease, box-shadow 0.25s ease;
-        }
-
-        .event-div .inside-event-div .event-div-first:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
-        }
-
-        .event-div .event-div-first div {
-            width: 100%;
-            height: 150px;
-            clip-path: polygon(50% 1.25%, 9.9% 20.56%, 0% 63.95%, 27.75% 98.75%, 72.25% 98.75%, 100% 63.95%, 90.1% 20.56%);
-            background: linear-gradient(145deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.06));
-            border-radius: 12px;
-        }
-
-        .event-div .event-div-first div video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 5px;
-            z-index: 1;
-        }
-
-        .event-div .event-div-first h5 {
-            font-size: 16px;
-            font-weight: 600;
-            color: #e7ffe7;
-            text-align: center;
-        }
-
-        .event-div .event-div-first p {
-            font-size: 13px;
-            line-height: 1.45;
-            text-align: center;
-            color: #d6f5d6;
-        }
-
-        .gallery-outside {
-            background: linear-gradient(to right, #4caf50, #afc791);
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 40px 30px;
-        }
-
-        .gallery-heading {
-            color: #0f4d25;
-            font-family: var(--italic-font, 'Georgia', serif);
-            font-size: 36px;
-            margin-bottom: 25px;
-            text-align: center;
-            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
-        }
-
-        .gallery-container {
-            width: 90%;
-            display: flex;
-            gap: 20px;
-            align-items: flex-start;
-        }
-
-        .intro-column {
-            width: 22%;
-            min-width: 220px;
-            display: flex;
-            flex-direction: column;
-            gap: 14px;
-        }
-
-        .intro-title {
-            color: #0f4d25;
-            font-family: var(--italic-font, 'Georgia', serif);
-            font-size: 22px;
-
-        }
-
-        .intro-text {
-            color: #0f4d25;
-            line-height: 1.5;
-            font-size: 14px;
-        }
-
-        .intro-grid {
-            display: grid;
-            gap: 10px;
-        }
-
-        .intro-grid img {
-            width: 100%;
-            border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, .12);
-        }
-
-        .masonry {
-            flex: 1;
-            column-count: 4;
-            column-gap: 16px;
-        }
-
-        .masonry-item {
-            break-inside: avoid;
-            margin-bottom: 16px;
-            border-radius: 10px;
-            overflow: hidden;
-            background: #fff;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, .12);
-        }
-
-        .masonry-item img {
-            width: 100%;
-            display: block;
-        }
-
-        @media (max-width: 1200px) {
-            .gallery-container {
-                width: 95%;
-            }
-
-            .masonry {
-                column-count: 3;
-            }
-        }
-
-        @media (max-width: 900px) {
-            .gallery-container {
-                flex-direction: column;
-            }
-
-            .intro-column {
-                width: 100%;
-            }
-
-            .masonry {
-                column-count: 2;
-            }
-        }
-
-        @media (max-width: 520px) {
-            .masonry {
-                column-count: 1;
-            }
-        }
-
-
-        @media (max-width:525px) {
-
-            /* media queries for header part  */
-            .nav-div {
-                /* justify-content: center; */
-                align-items: center;
-                flex-direction: column;
-                gap: 10px;
-               padding: 0 0;
-               display: block;
-            }
-
-            .nav-div div ul {
-
-                display: none;
-            }
-
-            .nav-div .logo .font-change1 {
-                display: none;
-            }
-
-            .nav-div .logo .font-change2 {
-                display: block;
-            }
-
-            /* media queries end  for header part  */
-
-            /* media queries for hero section   */
-             .hero-section{
-                flex-direction: column;
-             }
-            .hero-section .hero-text {
-                width: 250px;
-                height: auto;
-               
-               
-                padding: 13px;
-            }
-
-            .hero-section div h1 {
-                font-size: 20px;
-            }
-
-            .hero-section div p {
-                font-size: 14px;
-            }
-
-            .hero-section .hero-text .features div {
-                width: 60px;
-                height: 60px;
-                overflow: hidden;
-            }
-
-            .hero-section .hero-text .features div video {
-                width: 60px;
-                height: 60px;
-
-            }
-
-            .hero-section .leader {
-                width: 100%;
-               
-
-            }
-
-            .hero-section .inside-leader {
-                gap: 7px;
-                justify-content: start;
-            }
-
-            .hero-section .inside-leader div {
-                width: 100px;
-                height: 120px;
-            }
-
-            .leader div img {
-                width: 80px;
-                height: 83px;
-
-            }
-
-            .leader div h4 {
-                font-size: 11px;
-            }
-              .history{
-                overflow: hidden;
-              }
-            section .history .history-text{
-                flex-direction: column;
-                width: 100%;
-                 height: auto;
-            }
-
-            section .history .history-text .history-1,
-            section .history .history-text .history-2 {
-                margin-top: 10px;
-                width: 100%;
-                height: auto;
-                flex-direction: column;
-            }
-
-           
-
-            section .history .history-text .history-1 .insidehistory-1,
-            section .history .history-text .history-2 .insidehistory-1 {
-                width: 100%;
-                height: 100%;
-            }
-            section .history .history-text .history-3{
-                padding: 14px;
-            }
-
-            section .history .history-text .history-1 .insidehistory-1 h1,
-            section .history .history-text .history-2 .insidehistory-1 h1,
-            section .history .history-text .history-3 h1 {
-                font-size: 17px;
-            }
-
-            section .history .history-text .history-1 .insidehistory-1 p,
-            section .history .history-text .history-2 .insidehistory-1 p ,section .history .history-text .history-3 p {
-                font-size: 10px;
-            }
-
-            /* histroy 3 box */
-            .insidehistory-1-2,
-            section .history .history-text .history-2 .insidehistory-1-2,
-           
-            section .history .history-text .history-1 .insidehistory-1-2,
-            section .history .history-text .history-3 .clippathdiv {
-                height: 100%;
-                width: 100%;
-            }
-            #historyheading{
-                font-size: 30px;
-            }
-        }
-
-        /* Footer */
-        .site-footer {
-            background: radial-gradient(1200px 400px at 50% -10%, rgba(255, 255, 255, 0.08), transparent),
-                linear-gradient(135deg, #0b5d2a 0%, #0a3d1e 50%, #062614 100%);
-            color: #eaffea;
-            position: relative;
-            overflow: hidden;
-            box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.25) inset;
-        }
-
-        .site-footer .footer-inner {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 48px 20px 22px 20px;
-            display: grid;
-            grid-template-columns: 1.2fr 1fr 1fr;
-            gap: 24px;
-        }
-
-        .site-footer .footer-brand {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-
-        .site-footer .footer-brand .brand-row {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .site-footer .footer-brand img {
-            width: 56px;
-            height: 36px;
-            border-radius: 6px;
-            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35);
-        }
-
-        .site-footer .footer-brand h3 {
-            font-family: var(--italic-font);
-            letter-spacing: 0.3px;
-            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
-        }
-
-        .site-footer .footer-brand p {
-            color: #d6f5d6;
-            line-height: 1.55;
-            font-size: 14px;
-        }
-
-        .site-footer .social-links {
-            display: flex;
-            gap: 10px;
-            margin-top: 6px;
-        }
-
-        .site-footer .social-links a {
-            width: 36px;
-            height: 36px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            color: #eaffea;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            background: rgba(255, 255, 255, 0.08);
-            backdrop-filter: blur(6px);
-            -webkit-backdrop-filter: blur(6px);
-            transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
-        }
-
-        .site-footer .social-links a:hover {
-            transform: translateY(-3px);
-            background: rgba(255, 255, 255, 0.16);
-            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
-        }
-
-        .site-footer .footer-links h4,
-        .site-footer .footer-contact h4 {
-            font-size: 16px;
-            font-weight: 600;
-            letter-spacing: 0.2px;
-            margin-bottom: 10px;
-            color: #e7ffe7;
-        }
-
-        .site-footer .footer-links ul {
-            list-style: none;
-            display: grid;
-            gap: 8px;
-        }
-
-        .site-footer .footer-links a {
-            color: #d6f5d6;
-            text-decoration: none;
-            position: relative;
-            transition: color 0.2s ease;
-        }
-
-        .site-footer .footer-links a::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            bottom: -2px;
-            width: 100%;
-            height: 1px;
-            background: #eaffea;
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform 0.25s ease;
-        }
-
-        .site-footer .footer-links a:hover {
-            color: #ffffff;
-        }
-
-        .site-footer .footer-links a:hover::after {
-            transform: scaleX(1);
-        }
-
-        .site-footer .footer-contact p {
-            color: #d6f5d6;
-            font-size: 14px;
-            margin-bottom: 12px;
-        }
-
-        .site-footer .newsletter {
-            display: flex;
-            gap: 8px;
-            align-items: center;
-        }
-
-        .site-footer .newsletter input[type="email"] {
-            flex: 1;
-            min-width: 200px;
-            padding: 10px 12px;
-            border-radius: 8px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            outline: none;
-            background: rgba(255, 255, 255, 0.1);
-            color: #eaffea;
-        }
-
-        .site-footer .newsletter input::placeholder {
-            color: #eaffea;
-            opacity: 0.75;
-        }
-
-        .site-footer .newsletter button {
-            padding: 10px 14px;
-            border-radius: 8px;
-            border: 1px solid var(--green-color);
-            background: rgba(250, 250, 250, 0.75);
-            color: var(--green-color);
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.25s ease;
-        }
-
-        .site-footer .newsletter button:hover {
-            background: var(--green-color);
-            color: #ffffff;
-        }
-
-        .site-footer .footer-bottom {
-            border-top: 1px solid rgba(255, 255, 255, 0.18);
-            text-align: center;
-            padding: 14px 16px 18px 16px;
-            color: #d6f5d6;
-            font-size: 13px;
-        }
-
-        @media (max-width: 900px) {
-            .site-footer .footer-inner {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
-
-        @media (max-width: 520px) {
-            .site-footer .footer-inner {
-                grid-template-columns: 1fr;
-            }
-
-            .site-footer .newsletter {
-                flex-direction: column;
-                align-items: stretch;
-            }
-
-            .site-footer .newsletter button {
-                width: 100%;
-            }
-        }
-        /* Provinces Section */
-        .provinces-section {
-            width: 100%;
-            background: #ffffff;
-            padding: 40px 20px;
-        }
-        .provinces-section .provinces-inner {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .section-title {
-            text-align: center;
-            font-family: var(--italic-font);
-            color: var(--green-color);
-            font-size: 32px;
-            margin-bottom: 18px;
-            text-shadow: 0 2px 8px rgba(0,0,0,0.15);
-        }
-        .section-subtitle {
-            text-align: center;
-            color: #0f4d25;
-            margin-bottom: 24px;
-        }
-        .provinces-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 16px;
-        }
-        .province-card {
-            background: #fff;
-            border: 1px solid rgba(0,0,0,0.08);
-            border-radius: 12px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
-            padding: 16px;
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-            transition: transform .2s ease, box-shadow .2s ease;
-        }
-        .province-card:hover { transform: translateY(-4px); box-shadow: 0 14px 28px rgba(0,0,0,0.16); }
-        .province-card h4 { color: var(--green-color); font-weight: 700; display:flex; align-items:center; gap:8px; }
-        .province-card p { color: #1b5e20; font-size: 14px; }
-        @media (max-width: 1024px) { .provinces-grid { grid-template-columns: repeat(2, 1fr); } }
-        @media (max-width: 560px) { .provinces-grid { grid-template-columns: 1fr; } }
-
-        /* Armed Forces Section */
-        .forces-section {
-            background: radial-gradient(1200px 400px at 50% -10%, rgba(255,255,255,0.08), transparent),
-                linear-gradient(135deg, #0b5d2a 0%, #0a3d1e 50%, #062614 100%);
-            color: #eaffea;
-            padding: 44px 20px 50px 20px;
-        }
-        .forces-section .forces-inner { max-width: 1200px; margin: 0 auto; }
-        .forces-section .section-title { color: #eaffea; text-shadow: 0 2px 10px rgba(0,0,0,0.35); }
-        .forces-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 18px;
-        }
-        .force-card {
-            border-radius: 16px;
-            background: rgba(255,255,255,0.08);
-            border: 1px solid rgba(255,255,255,0.15);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.25);
-            backdrop-filter: blur(8px);
-            -webkit-backdrop-filter: blur(8px);
-            padding: 14px 14px 16px 14px;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            transition: transform .25s ease, box-shadow .25s ease;
-        }
-
-
-        .force-card:hover { transform: translateY(-6px); box-shadow: 0 16px 40px rgba(0,0,0,0.35); }
-        .force-card .media { width: 100%; height: 170px; border-radius: 10px; overflow: hidden; }
-        .force-card .media video { width: 100%; height: 100%; object-fit: cover; }
-        .force-card h5 { color: #e7ffe7; font-size: 16px; font-weight: 700; display:flex; align-items:center; gap:8px; }
-        .force-card p { color: #d6f5d6; font-size: 13px; line-height: 1.45; }
-        @media (max-width: 992px) { .forces-grid { grid-template-columns: 1fr 1fr; } }
-        @media (max-width: 560px) { .forces-grid { grid-template-columns: 1fr; } }
     </style>
-
 </head>
 
 <body>
@@ -1299,10 +51,10 @@
     </header>
     <!-- header end -->
     <!-- hero section start -->
-    <main>
+     <main>
         <div class="hero-section">
-            <video class="hero" src="./assests/videoplayback.mp4" autoplay muted loop playsinline
-                preload="metadata" loading="lazy"></video>
+            <video class="hero" src="./assests/videoplayback.mp4" autoplay muted loop playsinline preload="metadata"
+                loading="lazy"></video>
             <div class="overlay"></div>
             <div class="hero-text">
                 <h1 class="hero-text-heading">
@@ -1317,100 +69,94 @@
                 </button>
                 <div class="features">
                     <div class="features-video-one">
-                        <video src="./assests/videoplayback.mp4" autoplay muted loop playsinline
-                            preload="metadata" loading="lazy"></video>
+                        <video src="./assests/videoplayback.mp4" autoplay muted loop playsinline preload="metadata"
+                            loading="lazy"></video>
 
                     </div>
                     <div class="features-video-two">
-                        <video src="./assests/128740-742053572.mp4" autoplay muted loop playsinline
-                            preload="metadata" loading="lazy"></video>
+                        <video src="./assests/128740-742053572.mp4" autoplay muted loop playsinline preload="metadata"
+                            loading="lazy"></video>
 
                     </div>
                     <div class="features-video-three">
-                        <video src="./assests/133073-755697239.mp4" autoplay muted loop playsinline
-                            preload="metadata" loading="lazy"></video>
+                        <video src="./assests/133073-755697239.mp4" autoplay muted loop playsinline preload="metadata"
+                            loading="lazy"></video>
 
                     </div>
                 </div>
             </div>
             <div class="leader ">
 
-            
-                    <div>
-                        <img class="leader-image" src="./assests/jinnah.jpg" alt="" loading="lazy">
-                        <h4 class="leader-heading">Ali Jinnah</h4>
 
-                    </div>
+                <div>
+                    <img class="leader-image" src="./assests/jinnah.jpg" alt="" loading="lazy">
+                    <h4 class="leader-heading">Ali Jinnah</h4>
 
-                    <div>
-                        <img class="leader-image-two    " src="./assests/Fatima_jinnah1 (3).jpg" alt="" loading="lazy">
-                        <h4 class="leader-heading">Fatima Jinnah</h4>
-                    </div>
+                </div>
 
-                    <div>
+                <div>
+                    <img class="leader-image-two    " src="./assests/Fatima_jinnah1 (3).jpg" alt="" loading="lazy">
+                    <h4 class="leader-heading">Fatima Jinnah</h4>
+                </div>
 
-                        <img class="leader-image" src="./assests/Muhammad_Iqbal_in_1931.jpg" alt="" loading="lazy">
-                        <h4 class="leader-heading">Allama Iqbal</h4>
-                    </div>
+                <div>
 
-            
+                    <img class="leader-image" src="./assests/Muhammad_Iqbal_in_1931.jpg" alt="" loading="lazy">
+                    <h4 class="leader-heading">Allama Iqbal</h4>
+                </div>
 
-        </div>
+
+
+            </div>
         </div>
     </main>
     <!-- hero section end -->
 
     <!-- Histroy section start-->
 
-    <section>
-        <div class="history" id="history">
-            <div class="headinghisdiv">
-
-                <h1 id="historyheading">History Of Pakistan</h1>
-            </div>
-            <div class="history-text">
-                <div class="double-div">
-                    <div class="history-1">
-                        <div class="insidehistory-1">
-                            <h1 class="his-heading">Pre-Independence Era</h1>
-
-                            <p>"Before the birth of Pakistan, Muslims in the Indian subcontinent struggled for their
-                                identity, rights, and freedom. Guided by leaders like Allama Iqbal and Quaid-e-Azam, the
-                                Two-Nation Theory became the foundation for a separate homeland."</p>
-                        </div>
-                        <div class="insidehistory-1-2">
-                            <video src="./assests/videoplayback (5).mp4" autoplay muted loop playsinline
-                                preload="metadata" loading="lazy"></video>
-                        </div>
-                    </div>
-                    <div class="history-2">
-
-                        <div class="insidehistory-1">
-                            <h1 class="his-heading">Independence & Creation (1947)</h1>
-
-                            <p>"On 14 August 1947, Pakistan emerged as an independent nation after decades of struggle.
-                                Millions migrated to the new country, facing hardships but holding onto hope for a
-                                better future."</p>
-                        </div>
-                        <div class="insidehistory-1-2">
-                            <video src="./assests/videoplayback (6).mp4" autoplay muted loop playsinline
-                                preload="metadata" loading="lazy"></video>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="history-3">
-                    <h1 class="his-heading">Early Years of Pakistan</h1>
-                    <div class="clippathdiv">
-                        <video src="./assests/videoplayback (7).mp4" autoplay muted loop playsinline
-                            preload="metadata" loading="lazy"></video>
-                    </div>
-                    <p>"In its early years, Pakistan worked hard to build its institutions, economy, and unity. Despite
-                        challenges, the spirit of sacrifice and patriotism shaped the nation’s foundation."</p>
-                </div>
-            </div>
+   <section class="history" id="history">
+  <div class="headinghisdiv">
+    <h1 class="pakheading" id="historyheading">History Of Pakistan</h1>
+  </div>
+  
+  <div class="history-container">
+    <!-- First Row (2 cards) -->
+    <div class="history-row">
+      <div class="history-card">
+        <div class="card-content">
+          <h1 id="his-heading">Pre-Independence Era</h1>
+          <p>"Before the birth of Pakistan, Muslims in the Indian subcontinent struggled for their identity, rights, and freedom. Guided by leaders like Allama Iqbal and Quaid-e-Azam, the Two-Nation Theory became the foundation for a separate homeland."</p>
         </div>
-    </section>
+        <div class="card-media">
+          <video src="./assests/videoplayback (5).mp4" autoplay muted loop playsinline preload="metadata" loading="lazy"></video>
+        </div>
+      </div>
+      
+      <div class="history-card">
+        <div class="card-content">
+          <h1 id="his-heading">Independence & Creation (1947)</h1>
+          <p>"On 14 August 1947, Pakistan emerged as an independent nation after decades of struggle. Millions migrated to the new country, facing hardships but holding onto hope for a better future."</p>
+        </div>
+        <div class="card-media">
+          <video src="./assests/videoplayback (6).mp4" autoplay muted loop playsinline preload="metadata" loading="lazy"></video>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Second Row (1 card) -->
+    <div class="history-row">
+      <div class="history-card single-card">
+        <div class="card-content">
+          <h1 id="his-heading">Early Years of Pakistan</h1>
+          <p>"In its early years, Pakistan worked hard to build its institutions, economy, and unity. Despite challenges, the spirit of sacrifice and patriotism shaped the nation's foundation."</p>
+        </div>
+        <div class="card-media">
+          <video src="./assests/videoplayback (7).mp4" autoplay muted loop playsinline preload="metadata" loading="lazy"></video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
     <!-- Histroy section  end-->
 
@@ -1488,17 +234,17 @@
             </div>
 
         </div>
-    </section> 
+    </section>
     <!-- end upcoming event section -->
     <!-- line scrolling start -->
-     <section>
+    <section>
 
         <div class="scroll-text">
             <h1>Pakistan – A land of dreams, sacrifices, and endless possibilities. United we stand, proud we shine,
                 forever
                 free and strong!</h1>
         </div>
-    </section>  
+    </section>
     <!-- line scrolling end -->
 
 
@@ -1508,7 +254,7 @@
             <h2 class="gallery-heading">🇵🇰 Enjoying Moments – Yaadgar Lamhe</h2>
 
             <div class="gallery-container">
-             
+
                 <aside class="intro-column">
                     <h3 class="intro-title">Highlights</h3>
                     <p class="intro-text">
@@ -1516,42 +262,64 @@
                         banati hain.
                     </p>
                     <div class="intro-grid">
-                        <img src="./assests/image1.jpg" alt="Side image" loading="lazy">
-                        <img src="./assests/images6.avif" alt="Side image" loading="lazy">
+                        <img  src="./assests/image1.jpg" alt="Side image" loading="lazy">
+                        <img src="./assests/images15.webp" id="hideimage" alt="Gallery image" loading="lazy">
                         <img src="./assests/images5.png" alt="Side image" loading="lazy">
 
                     </div>
                 </aside>
 
-            
+
                 <div class="masonry">
-                 
+
                     <div class="masonry-item">
                         <img src="./assests/image8.jpg" alt="Pakistan Independence Day celebration" loading="lazy">
                     </div>
 
-                  
+
                     <div class="masonry-item"><img src="./assests/image4.jpg" alt="Gallery image" loading="lazy"></div>
                     <div class="masonry-item"><img src="./assests/image7.jpg" alt="Gallery image" loading="lazy"></div>
                     <div class="masonry-item"><img src="./assests/images9.jpg" alt="Gallery image" loading="lazy"></div>
-                    <div class="masonry-item"><img src="./assests/images10.jpg" alt="Gallery image" loading="lazy"></div>
-                    <div class="masonry-item"><img src="./assests/images11.jpg" alt="Gallery image" loading="lazy"></div>
-                    <div class="masonry-item"><img src="./assests/images12.webp" alt="Gallery image" loading="lazy"></div>
-                    <div class="masonry-item"><img src="./assests/images13.webp" alt="Gallery image" loading="lazy"></div>
-                    <div class="masonry-item"><img src="./assests/images14.webp" alt="Gallery image" loading="lazy"></div>
-                    <div class="masonry-item"><img src="./assests/images15.webp" alt="Gallery image" loading="lazy"></div>
-                    <div class="masonry-item"><img src="./assests/images16.jpg" alt="Gallery image" loading="lazy"></div>
-                    <div class="masonry-item"><img src="./assests/image17.jfif" alt="Gallery image" loading="lazy"></div>
-                    <div class="masonry-item"><img src="./assests/images18.jpg" alt="Gallery image" loading="lazy"></div>
-                    <div class="masonry-item"><img src="./assests/images19.webp" alt="Gallery image" loading="lazy"></div>
-                    <div class="masonry-item"><img src="./assests/images20.jpg" alt="Gallery image" loading="lazy"></div>
-                    <div class="masonry-item"> <img src="./assests/image1.jpg" alt="Side image" loading="lazy"></div>
-                    <div class="masonry-item"><img src="./assests/images20.jpg" alt="Gallery image" loading="lazy"></div>
-                    <div class="masonry-item"> <img src="./assests/images5.png" alt="Side image" loading="lazy"></div>
+                    <div class="masonry-item"><img src="./assests/images10.jpg" alt="Gallery image" loading="lazy">
+                    </div>
+                    <div class="masonry-item"><img src="./assests/images11.jpg" alt="Gallery image" loading="lazy">
+                    </div>
+                    <div class="masonry-item" id="hideimage"><img src="./assests/images12.webp" alt="Gallery image" loading="lazy">
+                    </div>
+                    <div class="masonry-item" id="hideimage"><img src="./assests/images13.webp" alt="Gallery image" loading="lazy">
+                    </div>
+                    <div class="masonry-item" id="hideimage"><img src="./assests/images14.webp" alt="Gallery image" loading="lazy">
+                    </div>
+                    <div class="masonry-item" id="hideimage"><img src="./assests/images15.webp" alt="Gallery image" loading="lazy">
+                    </div>
+                    <div class="masonry-item" id="hideimage"><img src="./assests/images16.jpg" alt="Gallery image" loading="lazy">
+                    </div>
+                    <div class="masonry-item" id="hideimage"><img src="./assests/image17.jfif" alt="Gallery image" loading="lazy">
+                    </div>
+                    <div class="masonry-item" id="hideimage"><img src="./assests/images18.jpg" alt="Gallery image" loading="lazy">
+                    </div>
+                    <div class="masonry-item" id="hideimage" ><img src="./assests/images19.webp" alt="Gallery image"
+                            loading="lazy">
+                    </div>
+                    <div class="masonry-item" id="hideimage" ><img src="./assests/images20.jpg" alt="Gallery image"
+                            loading="lazy">
+                    </div>
+                    <div class="masonry-item" id="hideimage" > <img src="./assests/image1.jpg" alt="Side image"
+                            loading="lazy"></div>
+                    <div class="masonry-item" id="hideimage"><img src="./assests/images20.jpg" alt="Gallery image"
+                            loading="lazy">
+                    </div>
+                    <div class="masonry-item" id="hideimage" > <img src="./assests/images5.png" alt="Side image"
+                            loading="lazy"></div>
 
-                    <div class="masonry-item"> <img src="./assests/image2.jpg" alt="Side image" loading="lazy"></div>
-                    <div class="masonry-item"> <img src="./assests/image3.jpg" alt="Side image" loading="lazy"> </div>
-                    <div class="masonry-item"> <img src="./assests/images6.avif" alt="Side image" loading="lazy"></div>
+                    <div class="masonry-item" id="hideimage" > <img src="./assests/image2.jpg" alt="Side image"
+                            loading="lazy"></div>
+                    <div class="masonry-item " id="hideimage" > <img src="./assests/image3.jpg" alt="Side image"
+                            loading="lazy"> </div>
+                    <div class="masonry-item" id="hideimage" > <img src="./assests/images6.avif" alt="Side image"
+                            loading="lazy"></div>
+                    <div class="masonry-item" id="hideimage"> <img src="./assests/image8.jpg"
+                            alt="Pakistan Independence Day celebration" loading="lazy"></div>
 
 
 
@@ -1560,13 +328,15 @@
 
 
 
-                    <div class="masonry-item"><img src="./assests/Fans Restaurant GIF by D-Block Europe.gif"
+
+                    <div class="masonry-item" id="hideimage"><img src="./assests/Fans Restaurant GIF by D-Block Europe.gif"
                             alt="Gallery image" loading="lazy"></div>
-                    <div class="masonry-item"><img src="./assests/flag.webp" alt="Gallery image" loading="lazy"></div>
-                    <div class="masonry-item"><img src="./assests//images9.jpg" alt="Gallery image" loading="lazy"></div>
+                    <div class="masonry-item" id="hideimage"><img src="./assests/flag.webp" alt="Gallery image" loading="lazy"></div>
+                    <div class="masonry-item" id="hideimage"><img src="./assests//images9.jpg" alt="Gallery image" loading="lazy">
+                    </div>
                 </div>
 
-               
+
                 <aside class="intro-column">
                     <h3 class="intro-title">More Moments</h3>
                     <p class="intro-text">
@@ -1575,7 +345,7 @@
                     <div class="intro-grid">
                         <img src="./assests/image2.jpg" alt="Side image" loading="lazy">
                         <img src="./assests/image3.jpg" alt="Side image" loading="lazy">
-                        <img src="./assests/images6.avif" alt="Side image" loading="lazy">
+                        <img src="./assests/images13.webp" alt="Gallery image" loading="lazy">
 
                     </div>
                 </aside>
@@ -1589,11 +359,13 @@
     <section class="provinces-section" id="provinces">
         <div class="provinces-inner">
             <h2 class="section-title">Pakistan ke Subay (Provinces)</h2>
-            <p class="section-subtitle">Har suba apni zubaan, saqafat aur riwayat ke saath hamari pehchan ko mazboot banata hai.</p>
+            <p class="section-subtitle">Har suba apni zubaan, saqafat aur riwayat ke saath hamari pehchan ko mazboot
+                banata hai.</p>
             <div class="provinces-grid">
                 <div class="province-card">
                     <h4><i class="fa-solid fa-star-and-crescent"></i> Punjab</h4>
-                    <p>Zarakhayz zameen, mehnati log aur tehzeeb o saqafat ka markaz. Lahore ko dil-e-Pakistan bhi kaha jata hai.</p>
+                    <p>Zarakhayz zameen, mehnati log aur tehzeeb o saqafat ka markaz. Lahore ko dil-e-Pakistan bhi kaha
+                        jata hai.</p>
                 </div>
                 <div class="province-card">
                     <h4><i class="fa-solid fa-star-and-crescent"></i> Sindh</h4>
@@ -1605,7 +377,8 @@
                 </div>
                 <div class="province-card">
                     <h4><i class="fa-solid fa-star-and-crescent"></i> Balochistan</h4>
-                    <p>Wasee sahra, reesho ka virsa aur culturally rich log. Gwadar bandargah humari taraqqi ki raah.</p>
+                    <p>Wasee sahra, reesho ka virsa aur culturally rich log. Gwadar bandargah humari taraqqi ki raah.
+                    </p>
                 </div>
             </div>
         </div>
@@ -1618,21 +391,25 @@
             <div class="forces-grid">
                 <div class="force-card">
                     <div class="media">
-                        <video src="./assests/videoplayback (8).mp4" autoplay muted loop playsinline preload="metadata" loading="lazy"></video>
+                        <video src="./assests/videoplayback (8).mp4" autoplay muted loop playsinline preload="metadata"
+                            loading="lazy"></video>
                     </div>
                     <h5><i class="fa-solid fa-person-military-pointing"></i> Pakistan Army</h5>
-                    <p>Mulki hifazat, aman o aman aur qaumi islahat mein hamesha pehlu numaya. Jazba-e-iman ke saath.</p>
+                    <p>Mulki hifazat, aman o aman aur qaumi islahat mein hamesha pehlu numaya. Jazba-e-iman ke saath.
+                    </p>
                 </div>
                 <div class="force-card">
                     <div class="media">
-                        <video src="./assests/videoplayback (9).mp4" autoplay muted loop playsinline preload="metadata" loading="lazy"></video>
+                        <video src="./assests/videoplayback (9).mp4" autoplay muted loop playsinline preload="metadata"
+                            loading="lazy"></video>
                     </div>
                     <h5><i class="fa-solid fa-anchor"></i> Pakistan Navy</h5>
                     <p>Samandari sarhadon ki hifazat, maritime security aur behtareen professional force.</p>
                 </div>
                 <div class="force-card">
                     <div class="media">
-                        <video src="./assests/videoplayback (10).mp4" autoplay muted loop playsinline preload="metadata" loading="lazy"></video>
+                        <video src="./assests/videoplayback (10).mp4" autoplay muted loop playsinline preload="metadata"
+                            loading="lazy"></video>
                     </div>
                     <h5><i class="fa-solid fa-jet-fighter-up"></i> Pakistan Air Force</h5>
                     <p>Aasmani hifazat, modern jets aur cutting-edge technology ke saath quwat-e-difa ka aham hissa.</p>
@@ -1640,13 +417,14 @@
             </div>
         </div>
     </section>
-     <!-- anothre scrol text start  -->
-<section>
+    <!-- anothre scrol text start  -->
+    <section>
 
-    <div class="scroll-text">
-        <h1>🇵🇰 Long Live Pakistan — United We Stand, Proud We Shine! 🇵🇰</h1>
-    </div></section>  
- <!-- another scroll text end -->
+        <div class="scroll-text">
+            <h1>🇵🇰 Long Live Pakistan — United We Stand, Proud We Shine! 🇵🇰</h1>
+        </div>
+    </section>
+    <!-- another scroll text end -->
     <!-- Footer -->
     <footer class="site-footer">
         <div class="footer-inner">
